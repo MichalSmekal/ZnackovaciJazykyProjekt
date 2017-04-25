@@ -1,0 +1,384 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eshop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="defsettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="charset"/>
+              <xs:element type="xs:string" name="language"/>
+              <xs:element type="xs:byte" name="javascript"/>
+              <xs:element type="xs:byte" name="vbscript"/>
+              <xs:element name="functions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="comments"/>
+                    <xs:element type="xs:byte" name="search"/>
+                    <xs:element type="xs:byte" name="instantmessage"/>
+                    <xs:element type="xs:byte" name="rating"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="protocol"/>
+              <xs:element type="xs:string" name="restrictions"/>
+              <xs:element type="xs:string" name="contact"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="users">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="userrights" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="level"/>
+                    <xs:element type="xs:byte" name="cteni"/>
+                    <xs:element type="xs:byte" name="hodnoceni"/>
+                    <xs:element type="xs:byte" name="komentovani"/>
+                    <xs:element type="xs:byte" name="mazaniproduktu"/>
+                    <xs:element type="xs:byte" name="pridavaniproduktu"/>
+                    <xs:element type="xs:byte" name="upravastranky"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="role" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="informace">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="pobocka_informace"/>
+              <xs:element type="xs:string" name="nazev_informace"/>
+              <xs:element name="adresa_informace">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="mesto_informace"/>
+                    <xs:element type="xs:string" name="ulice_informace"/>
+                    <xs:element type="xs:byte" name="cp_informace"/>
+                    <xs:element type="xs:short" name="PSC_informace"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="kontakt_informace">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="TEL_informace"/>
+                    <xs:element type="xs:string" name="FAX_informace"/>
+                    <xs:element type="xs:string" name="e-mail_informace"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="komponenty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="typkomponenty" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="id_CD_DVD" minOccurs="0"/>
+                    <xs:element name="cena_CD_DVD" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_CD_DVD" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_CD_DVD" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_CD_DVD" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_CD_DVD" minOccurs="0"/>
+                    <xs:element type="xs:string" name="rozhrani_CD_DVD" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element name="cena_FDD_mechaniky" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:short" name="vyrobce_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="rozhrani_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="format_FDD_mechaniky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_graficke_karty" minOccurs="0"/>
+                    <xs:element name="cena_graficke_karty" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_graficke_karty" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_graficke_karty" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_graficke_karty" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_graficke_karty" minOccurs="0"/>
+                    <xs:element type="xs:string" name="rozhrani_graficke_karty" minOccurs="0"/>
+                    <xs:element name="frekvence_graficke_karty" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="kapacita_graficke_karty" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="typ_pameti_graficke_karty" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:short" name="cena_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="vyrobce_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="uziti_chlazeni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_kabely_konektory" minOccurs="0"/>
+                    <xs:element name="cena_kabely_konektory" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="rozhrani_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="delka_kabely_konektory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_knihy" minOccurs="0"/>
+                    <xs:element name="cena_knihy" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="nakladatelstvi_knihy" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_knihy" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_knihy" minOccurs="0"/>
+                    <xs:element type="xs:string" name="autor_knihy" minOccurs="0"/>
+                    <xs:element type="xs:short" name="rok_vydani_knihy" minOccurs="0"/>
+                    <xs:element type="xs:string" name="isbn_knihy" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_operacni" minOccurs="0"/>
+                    <xs:element name="cena_operacni" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_operacni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_operacni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_operacni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_operacni" minOccurs="0"/>
+                    <xs:element name="kapacita_operacni" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="frekvence_operacni" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="rozhrani_operacni" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_flash" minOccurs="0"/>
+                    <xs:element name="cena_flash" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_flash" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_flash" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_flash" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_flash" minOccurs="0"/>
+                    <xs:element name="kapacita_flash" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="rozhrani_flash" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_pevne_disky" minOccurs="0"/>
+                    <xs:element name="cena_pevne_disky" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_pevne_disky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_pevne_disky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_pevne_disky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_pevne_disky" minOccurs="0"/>
+                    <xs:element name="kapacita_pevne_disky" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="rozhrani_pevne_disky" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_procesory" minOccurs="0"/>
+                    <xs:element name="cena_procesory" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_procesory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_procesory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_procesory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_procesory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="slot_procesory" minOccurs="0"/>
+                    <xs:element type="xs:string" name="id_media" minOccurs="0"/>
+                    <xs:element name="cena_media" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="vyrobce_media" minOccurs="0"/>
+                    <xs:element type="xs:string" name="typ_media" minOccurs="0"/>
+                    <xs:element type="xs:string" name="popis_media" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dostupnost_media" minOccurs="0"/>
+                    <xs:element name="kapacita_media" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="druh_media" minOccurs="0"/>
+                    <xs:element name="obal_media" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="odpoved"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ks_media" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="jednotky"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="typ" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="zakaznici">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dodaci_adresa_zakaznici">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="mesto_zakaznici"/>
+                    <xs:element type="xs:string" name="ulice_zakaznici"/>
+                    <xs:element type="xs:short" name="cp_zakaznici"/>
+                    <xs:element type="xs:short" name="PSC_zakaznici"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="kontakt_zakaznici">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="TEL_zakaznici"/>
+                    <xs:element type="xs:string" name="FAX_zakaznici"/>
+                    <xs:element type="xs:string" name="e-mail_zakaznici"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="slevy_zakaznici"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="doprava">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cena_doprava">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:short">
+                      <xs:attribute type="xs:string" name="jednotky"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="nazev_doprava"/>
+              <xs:element name="lhuta_doprava">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="jednotky"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

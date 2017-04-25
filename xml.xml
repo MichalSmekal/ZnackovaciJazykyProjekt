@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl.xsl"?>
+<eshop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd.xsd">
+<defsettings>
+	<charset>utf-8</charset>
+	<language>EN</language>
+	<javascript>1</javascript>
+	<vbscript>1</vbscript>
+	<functions>
+		<comments>1</comments>
+		<search>1</search>
+    <instantmessage>0</instantmessage>
+		<rating>0</rating>
+	</functions>
+	<protocol>http</protocol>
+	<restrictions></restrictions>	
+	<contact>shop@shop.cz</contact>
+</defsettings>
+
+<users>
+	<userrights role="Guest">
+		<level>0</level>
+		<cteni>1</cteni>
+		<hodnoceni>0</hodnoceni>
+		<komentovani>0</komentovani>
+		<mazaniproduktu>0</mazaniproduktu>
+		<pridavaniproduktu>0</pridavaniproduktu>
+		<upravastranky>0</upravastranky>
+	</userrights>
+	<userrights role="Registered member">
+<level>1</level>
+		<cteni>1</cteni>
+		<hodnoceni>1</hodnoceni>
+		<komentovani>1</komentovani>
+		<mazaniproduktu>0</mazaniproduktu>
+		<pridavaniproduktu>0</pridavaniproduktu>
+		<upravastranky>0</upravastranky>
+	</userrights>
+	<userrights role="Product administrator">
+	<level>2</level>
+		<cteni>1</cteni>
+		<hodnoceni>0</hodnoceni>
+		<komentovani>0</komentovani>
+		<mazaniproduktu>1</mazaniproduktu>
+		<pridavaniproduktu>1</pridavaniproduktu>
+		<upravastranky>0</upravastranky>
+	</userrights>
+	<userrights role="Administrator">
+		<level>3</level>
+		<cteni>1</cteni>
+		<hodnoceni>0</hodnoceni>
+		<komentovani>1</komentovani>
+		<mazaniproduktu>1</mazaniproduktu>
+		<pridavaniproduktu>1</pridavaniproduktu>
+		<upravastranky>1</upravastranky>
+	</userrights>
+</users>
+<informace>
+		<pobocka_informace>Centrala spolecnosti</pobocka_informace>
+		<nazev_informace>Prodejna-eletronics, a spol.</nazev_informace>
+		<adresa_informace>
+			<mesto_informace>Praha 6</mesto_informace>
+			<ulice_informace>Terronska</ulice_informace>
+			<cp_informace>45</cp_informace>
+			<PSC_informace>16000</PSC_informace>
+		</adresa_informace>
+		<kontakt_informace>
+			<TEL_informace>+420/666333999</TEL_informace>
+			<FAX_informace>+420/666333777</FAX_informace>
+			<e-mail_informace>pckram@pckram.com</e-mail_informace>
+		</kontakt_informace>
+	</informace>
+	
+<komponenty>
+    <typkomponenty typ="CD_DVD">
+      		<id_CD_DVD>ABCD6789</id_CD_DVD>
+			<cena_CD_DVD jednotky="Kc">1523</cena_CD_DVD>
+			<vyrobce_CD_DVD>LG</vyrobce_CD_DVD>
+			<typ_CD_DVD>LG</typ_CD_DVD>
+			<popis_CD_DVD>Spickova Blu-ray mechanika</popis_CD_DVD>
+				<dostupnost_CD_DVD>23ks</dostupnost_CD_DVD>
+			<rozhrani_CD_DVD>SATA</rozhrani_CD_DVD>
+		</typkomponenty>
+		
+    <typkomponenty typ="FDD_mechaniky">
+      	  <id_FDD_mechaniky>BDCF2589</id_FDD_mechaniky>
+		  <cena_FDD_mechaniky jednotky="Kc">323</cena_FDD_mechaniky>
+		  <vyrobce_FDD_mechaniky>519</vyrobce_FDD_mechaniky>
+		  <typ_FDD_mechaniky>4World External FDD</typ_FDD_mechaniky>
+		  <popis_FDD_mechaniky>skvela externi FDD mechanika na doma i na cestu</popis_FDD_mechaniky>
+		  <dostupnost_FDD_mechaniky>2ks</dostupnost_FDD_mechaniky>
+		  <rozhrani_FDD_mechaniky>SATA</rozhrani_FDD_mechaniky>
+		  <format_FDD_mechaniky>1,44 MB (3,5")</format_FDD_mechaniky>
+    </typkomponenty>
+		
+    <typkomponenty typ="graficke_karty">  
+      <id_graficke_karty>giol5735</id_graficke_karty>
+		  <cena_graficke_karty jednotky="Kc">800</cena_graficke_karty>
+		  <vyrobce_graficke_karty>ATI</vyrobce_graficke_karty>
+		  <typ_graficke_karty>ATI gio</typ_graficke_karty>
+		  <popis_graficke_karty>Jedna z nejlevice prodavanych grafickych karet roku 2010</popis_graficke_karty>
+      <dostupnost_graficke_karty>5ks</dostupnost_graficke_karty>
+		  <rozhrani_graficke_karty>PCIe</rozhrani_graficke_karty>
+		  <frekvence_graficke_karty jednotky="Mhz">860</frekvence_graficke_karty>
+		  <kapacita_graficke_karty jednotky="MB">1024</kapacita_graficke_karty>
+		  <typ_pameti_graficke_karty>DDR5</typ_pameti_graficke_karty>
+    </typkomponenty>
+		
+   <typkomponenty typ="chlazeni">
+     <id_chlazeni>NX221</id_chlazeni>
+     <cena_chlazeni>1588</cena_chlazeni>
+     <vyrobce_chlazeni>DentalIndustrie</vyrobce_chlazeni>
+     <typ_chlazeni>Vodni</typ_chlazeni>
+     <popis_chlazeni>Resene prutokem ohrate vody pres chlazeni, zpet do obehu v ochlazenem stavu</popis_chlazeni>
+     <dostupnost_chlazeni>3ks</dostupnost_chlazeni>
+     <uziti_chlazeni>CPU</uziti_chlazeni>
+		</typkomponenty>
+		<typkomponenty typ="kabely_konektory">
+          <id_kabely_konektory >juii2589</id_kabely_konektory>
+		  <cena_kabely_konektory jednotky="Kc">300</cena_kabely_konektory>
+		  <vyrobce_kabely_konektory>Harold Max</vyrobce_kabely_konektory>
+		  <typ_kabely_konektory>USB 2.0</typ_kabely_konektory>
+		  <popis_kabely_konektory>Standardni USB propojeni</popis_kabely_konektory>
+		  <dostupnost_kabely_konektory>20ks</dostupnost_kabely_konektory>
+		  <rozhrani_kabely_konektory>USB 2.0</rozhrani_kabely_konektory>
+		  <delka_kabely_konektory>2m</delka_kabely_konektory>
+		</typkomponenty>
+   <typkomponenty typ="knihy">
+		  <id_knihy>asuk5896</id_knihy>
+		  <cena_knihy jednotky="Kc">1568</cena_knihy>
+		  <nakladatelstvi_knihy>Ikaros</nakladatelstvi_knihy>
+		  <popis_knihy>Kniha pro milovniky xml kodu</popis_knihy>
+		  <dostupnost_knihy>100ks</dostupnost_knihy>
+		  <autor_knihy>Bill Doors</autor_knihy>
+		  <rok_vydani_knihy>2009</rok_vydani_knihy>
+		  <isbn_knihy>44654654654 - 213</isbn_knihy>
+		</typkomponenty>
+		
+	
+		  <typkomponenty typ="operacni">
+		    <id_operacni>iupl3589</id_operacni>
+    		<cena_operacni jednotky="Kc">799</cena_operacni>
+    		<vyrobce_operacni>Kingstone</vyrobce_operacni>
+    		<typ_operacni>So-Dimm II</typ_operacni>
+    		<popis_operacni>operacni pamet do pocitace</popis_operacni>
+    		<dostupnost_operacni>5ks</dostupnost_operacni>
+    		<kapacita_operacni jednotky="MB">2048</kapacita_operacni>
+    		<frekvence_operacni jednotky="Mhz">667</frekvence_operacni>
+    		<rozhrani_operacni>DIM II - 5 pin</rozhrani_operacni>
+		  </typkomponenty>
+		  <typkomponenty typ="flash">
+		    <id_flash>afhh5204</id_flash>
+		    <cena_flash jednotky="Kc">1112</cena_flash>
+		    <vyrobce_flash>Verbatim</vyrobce_flash>
+		    <typ_flash>Flash Zs23</typ_flash>
+		    <popis_flash>Mala prenosna flash pamet, ktera se hodi na cesty</popis_flash>
+		    <dostupnost_flash>8ks</dostupnost_flash>
+		    <kapacita_flash jednotky="MB">4096</kapacita_flash>
+		    <rozhrani_flash>USB 2.0</rozhrani_flash>
+      </typkomponenty>
+		
+    <typkomponenty typ="pevne_disky">
+    <id_pevne_disky>plmo0123</id_pevne_disky>
+    <cena_pevne_disky jednotky="Kc">1129</cena_pevne_disky>
+    <vyrobce_pevne_disky>WesternDigital</vyrobce_pevne_disky>
+    <typ_pevne_disky>WesternDigital 544waW</typ_pevne_disky>
+    <popis_pevne_disky>Hdd do vaseho pocitace, ktery potesi svym tichym chodem</popis_pevne_disky>
+    <dostupnost_pevne_disky>8ks</dostupnost_pevne_disky>
+    <kapacita_pevne_disky jednotky="GB">500</kapacita_pevne_disky>
+    <rozhrani_pevne_disky>SATA II</rozhrani_pevne_disky>
+  </typkomponenty>
+
+    <typkomponenty typ="procesory">
+    <id_procesory>uqty0001</id_procesory>
+    <cena_procesory jednotky="Kc">3241</cena_procesory>
+    <vyrobce_procesory>AMD</vyrobce_procesory>
+    <typ_procesory>Phenom II X4 965 Black Edition</typ_procesory>
+    <popis_procesory>Zastupce nejnovejsi generace procesoru AMD</popis_procesory>
+    <dostupnost_procesory>1ks</dostupnost_procesory>
+    <slot_procesory>Socket AM3</slot_procesory>
+  </typkomponenty>
+
+    <typkomponenty typ="media">
+    <id_media>zbip8000</id_media>
+    <cena_media jednotky="Kc">566</cena_media>
+    <vyrobce_media>Verbatim</vyrobce_media>
+    <typ_media>DVD</typ_media>
+    <popis_media>zalohovaci DVD, ktera se mohou opakovane prepisovat</popis_media>
+    <dostupnost_media>100ks</dostupnost_media>
+    <kapacita_media jednotky="MB">4496</kapacita_media>
+    <druh_media>RW+</druh_media>
+    <obal_media odpoved="ANO">z umele hmoty</obal_media>
+    <ks_media jednotky="ks">25</ks_media>
+  </typkomponenty>
+
+  
+</komponenty>
+<zakaznici>
+
+<dodaci_adresa_zakaznici>
+<mesto_zakaznici>Kladno</mesto_zakaznici>
+<ulice_zakaznici>Ocelarenska</ulice_zakaznici>
+<cp_zakaznici>1420</cp_zakaznici>
+<PSC_zakaznici>14101</PSC_zakaznici>
+</dodaci_adresa_zakaznici>
+
+<kontakt_zakaznici>
+    <TEL_zakaznici>+420/321684746</TEL_zakaznici>
+    <FAX_zakaznici>+420/321121123</FAX_zakaznici>
+    <e-mail_zakaznici>czuprojekt@gmail.com</e-mail_zakaznici>
+</kontakt_zakaznici>
+
+<slevy_zakaznici>D1 10%</slevy_zakaznici>
+
+</zakaznici>
+
+<doprava>
+<cena_doprava jednotky="Kc">149</cena_doprava>
+<nazev_doprava>PPL</nazev_doprava>
+<lhuta_doprava jednotky="dny">2</lhuta_doprava>
+</doprava>
+
+
+         	       	
+</eshop>
